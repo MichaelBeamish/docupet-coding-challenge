@@ -1,7 +1,9 @@
 <template>
   <div id="navigation">
     <b-navbar toggleable type="dark" variant="dark">
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
+      <b-navbar-brand>
+        <router-link to="/">My Pet Details</router-link>
+      </b-navbar-brand>
 
       <b-navbar-toggle target="navbar-toggle-collapse">
         <template #default="{ expanded }">
@@ -16,7 +18,7 @@
             <router-link to="/">Home</router-link>
           </b-nav-item>
           <b-nav-item>
-            <router-link to="/about">About</router-link>
+            <router-link to="/pet-page">Pet Page</router-link>
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
