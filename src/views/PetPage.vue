@@ -1,5 +1,5 @@
 <template>
-  <div id="pet-page" class="text-left">
+  <div id="pet-page" class="container">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     
     <h4>Pet Page</h4>

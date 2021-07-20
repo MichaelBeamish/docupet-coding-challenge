@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="contact container">
     <h3>My name is Michael Beamish</h3>
     <h5>I am a software developer living in Phoenix, Arizona.</h5>
     <br>

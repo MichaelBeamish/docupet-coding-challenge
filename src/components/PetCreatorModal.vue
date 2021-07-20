@@ -4,7 +4,7 @@
       <b-button id="show-btn" variant="primary" @click="showModal">Create A New Pet</b-button>
 
       <b-modal ref="creator-modal" hide-header hide-footer>
-        <div class="d-block text-center">
+        <div class="d-block">
           <h3>{{Object.keys(petToEdit).length ? 'Edit Your Pet' : 'Create A New Pet'}}</h3>
           <b-button v-if="!Object.keys(petToEdit).length" variant="primary" @click="generateRandomPet">Generate Random Data</b-button>
           
