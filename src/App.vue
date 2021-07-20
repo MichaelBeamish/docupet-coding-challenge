@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <Navigation/>
+    <Navigation class="mb-4"/>
     <router-view/>
+    <small class="footer">Michael Beamish - 2021</small>
   </div>
 </template>
 
@@ -34,5 +35,13 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 </style>

@@ -20,6 +20,7 @@ export default {
     border-radius: 50%;
     width: 153px;
     height: 153px;
+    margin: 0.5em;
     position: relative;
   }
   /* SINGLE IMAGE OF 16 ANIMAL ICONS */

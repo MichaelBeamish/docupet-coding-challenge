@@ -1,7 +1,7 @@
 <template>
   <div class="pet-creator">
     <div>
-      <b-button id="show-btn" @click="showModal">Create A New Pet</b-button>
+      <b-button id="show-btn" variant="primary" @click="showModal">Create A New Pet</b-button>
 
       <b-modal ref="creator-modal" hide-header hide-footer>
         <div class="d-block text-center">
@@ -10,14 +10,18 @@
           
           <PetSprite v-if="pet.type" :petType="pet.type"/>
           
-          <b-form-input class="mt-2" v-model="pet.name" placeholder="Enter your pets name"/>
-          <b-form-input class="mt-2" v-model="pet.age" placeholder="Enter your pets age"/>
-          <b-form-select class="mt-2 w-100" v-model="pet.gender" :options="genders"/>
-          <b-form-select class="mt-2 w-100" v-model="pet.type" :options="petTypes"/>
+          <label class="d-block mt-3">Name:</label>
+          <b-form-input v-model="pet.name"/>
+          <label class="d-block mt-3">Age:</label>
+          <b-form-input v-model="pet.age"/>
+          <label class="d-block mt-3">Gender:</label>
+          <b-form-select class="w-100" v-model="pet.gender" :options="genders"/>
+          <label class="d-block mt-3">Type:</label>
+          <b-form-select class="w-100" v-model="pet.type" :options="petTypes"/>
         </div>
         
         <div class="mt-4">
-          <b-button variant="success" @click="addOrEditPet" :disabled="pendingInfo">{{Object.keys(petToEdit).length ? 'Edit Pet' : 'Add Pet'}}</b-button>
+          <b-button variant="success" style="margin-right: 1em;" @click="addOrEditPet" :disabled="pendingInfo">{{Object.keys(petToEdit).length ? 'Edit Pet' : 'Add Pet'}}</b-button>
           <b-button variant="danger" @click="hideModal">Cancel</b-button>
         </div>
       </b-modal>
@@ -33,9 +37,6 @@ export default {
   name: 'PetCreatorModal',
   components: {
     PetSprite
-  },
-  props: {
-    details: Object
   },
   data () {
     return {

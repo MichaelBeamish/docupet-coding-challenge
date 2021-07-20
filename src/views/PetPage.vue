@@ -1,14 +1,20 @@
 <template>
-  <div id="pet-page">
+  <div id="pet-page" class="text-left">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     
-    <h2>Pet Page</h2>
+    <h4>Pet Page</h4>
+    <p>This is where all of your virtual pets live!</p>
     
-    <PetCreatorModal :details="{name: 'Pumpkin', age: 2, species: 'Komodo Dragon'}"/>
+    <PetCreatorModal/>
     
-    <div v-for="(pet, i) in petsList" :key="i">
-      <PetDetails :details="pet"/>
+    <div class="d-flex justify-content-center flex-wrap">
+      <div v-for="(pet, i) in petsList" :key="i" class="m-3">
+        <div style="width: 20em;">
+          <PetDetails :details="pet"/>
+        </div>
+      </div>      
     </div>
+
   </div>
 </template>
 

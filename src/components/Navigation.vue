@@ -1,8 +1,8 @@
 <template>
   <div id="navigation">
-    <b-navbar toggleable type="dark" variant="dark">
+    <b-navbar toggleable type="dark" variant="dark" class="px-4">
       <b-navbar-brand>
-        <router-link to="/">My Pet Details</router-link>
+        <router-link class="text-white" style="text-decoration: none;" to="/">Virtual Pets</router-link>
       </b-navbar-brand>
 
       <b-navbar-toggle target="navbar-toggle-collapse">
@@ -19,6 +19,9 @@
           </b-nav-item>
           <b-nav-item>
             <router-link to="/pet-page">Pet Page</router-link>
+          </b-nav-item>
+          <b-nav-item>
+              <router-link to="/contact">Contact</router-link>
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
